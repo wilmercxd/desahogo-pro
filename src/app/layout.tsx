@@ -34,7 +34,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Desahogo Pro Colombia" }],
   generator: "Next.js",
   verification: {
-    google: "OZ75py7ICHIeppJUS2_hiQfGcqXMB8ihxWo8-QjN0ew",
+    google: [
+      "sKBM9diXkhrnE3-lZ7VAB6Ls9u_sL2Pqfw3QRQnbMys",
+      "OZ75py7ICHIeppJUS2_hiQfGcqXMB8ihxWo8-QjN0ew",
+    ],
   },
   keywords: [
     // Búsquedas de alto volumen durante el año en Colombia
@@ -105,7 +108,7 @@ export const metadata: Metadata = {
     "geo.region": "CO",
     "geo.placename": "Colombia",
     "language": "Spanish",
-    "google-site-verification": "OZ75py7ICHIeppJUS2_hiQfGcqXMB8ihxWo8-QjN0ew",
+    "google-site-verification": "sKBM9diXkhrnE3-lZ7VAB6Ls9u_sL2Pqfw3QRQnbMys",
   },
 };
 
@@ -169,6 +172,7 @@ export default function RootLayout({
   return (
     <html lang="es-CO" className={`${inter.variable} ${newsreader.variable} scroll-smooth`}>
       <head>
+        <meta name="google-site-verification" content="sKBM9diXkhrnE3-lZ7VAB6Ls9u_sL2Pqfw3QRQnbMys" />
         <meta name="google-site-verification" content="OZ75py7ICHIeppJUS2_hiQfGcqXMB8ihxWo8-QjN0ew" />
         <script
           type="application/ld+json"
