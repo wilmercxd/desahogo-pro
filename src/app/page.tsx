@@ -4,13 +4,17 @@ import {
   ArrowUpRight,
   ShieldCheck,
   Sparkles,
-  Compass,
   Clock,
   Heart,
   AlertTriangle,
   Lock,
-  MessageSquare,
+  MessageCircle,
   CheckCircle2,
+  XCircle,
+  Calendar,
+  VolumeX,
+  Smile,
+  Compass,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -23,65 +27,70 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="relative pt-24 overflow-hidden">
-        {/* Glow ambient background effects */}
-        <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-purple-900/15 blur-[120px] pointer-events-none rounded-full" />
-        <div className="absolute top-96 right-10 w-[300px] h-[300px] bg-indigo-900/10 blur-[100px] pointer-events-none rounded-full" />
+      <main className="relative pt-24 pb-16 overflow-hidden">
+        {/* Ambient atmospheric lighting */}
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-gradient-to-b from-purple-600/10 via-teal-500/5 to-transparent blur-[140px] pointer-events-none rounded-full" />
+        <div className="absolute top-[800px] -right-20 w-[400px] h-[400px] bg-purple-900/10 blur-[120px] pointer-events-none rounded-full" />
 
-        {/* ================= HERO SECTION ================= */}
-        <section className="relative max-w-6xl mx-auto px-6 pt-12 pb-20 md:py-24">
+        {/* =========================================================================
+            1. HERO SECTION (High emotional resonance + Selia/BetterHelp trust cues)
+        ========================================================================= */}
+        <section className="relative max-w-6xl mx-auto px-6 pt-10 pb-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
-            {/* Left Column: Headline & Action */}
+            {/* Left Content Column */}
             <div className="lg:col-span-7 space-y-6">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-purple-500/20 bg-purple-500/10 text-purple-300 text-xs font-medium">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Espacio voluntario · 100% Confidencial y Gratuito</span>
+              
+              {/* Status Badge */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-300 text-xs font-medium backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
+                <span>Espacio voluntario gratuito · Confidencial y anónimo</span>
               </div>
 
-              {/* Title */}
+              {/* Main Headline */}
               <h1 className="font-serif text-4xl sm:text-6xl text-white font-normal tracking-tight leading-[1.08]">
                 El fin del <br />
-                <em className="italic text-purple-300 font-serif">ruido mental.</em>
+                <em className="italic text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-purple-300 to-indigo-300">
+                  ruido mental.
+                </em>
               </h1>
 
-              {/* Problem statement hook */}
+              {/* Problem Hook Statement */}
               <p className="text-zinc-300 text-base sm:text-lg max-w-xl leading-relaxed">
                 Estás cargando con algo que no puedes contarle a tus amigos para no
                 preocuparlos, ni a tu familia para no ser juzgado. Ese peso te
                 quita energía, enfoque y paz.
               </p>
 
-              {/* Hero CTA Box */}
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              {/* Call To Action Button Group */}
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
                 <a
                   href={CALENDAR_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-zinc-100 text-zinc-950 px-6 py-3.5 rounded-xl text-sm font-semibold transition-all active:scale-[0.98] shadow-lg shadow-white/5"
+                  className="group inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-teal-400 via-emerald-400 to-teal-300 text-zinc-950 px-7 py-4 rounded-full text-[15px] font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <span>Reservar 30 Minutos Gratis</span>
-                  <ArrowUpRight className="w-4 h-4 opacity-70" />
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
 
                 <a
                   href="#como-funciona"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-medium text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-sm font-medium text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] transition-colors"
                 >
                   ¿Cómo funciona?
                 </a>
               </div>
 
-              {/* Trust badges row */}
-              <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-zinc-400">
+              {/* Micro Trust Indicators */}
+              <div className="pt-3 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-zinc-400">
                 <div className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                  <span>Sin costo ni suscripciones</span>
+                  <ShieldCheck className="w-4 h-4 text-teal-400" />
+                  <span>Cero costo · Sin tarjetas</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Lock className="w-4 h-4 text-purple-400" />
-                  <span>Privacidad y anonimato total</span>
+                  <span>100% Privado y anónimo</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Clock className="w-4 h-4 text-zinc-300" />
@@ -90,171 +99,204 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column: Visual Warmth */}
+            {/* Right Visual Column (Card + Human connection illustration) */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-purple-950/20 group">
-                {/* Hero Editorial Photography */}
-                <div className="relative h-[380px] sm:h-[440px] w-full">
+              <div className="relative rounded-3xl overflow-hidden glass-panel border border-white/[0.1] shadow-2xl shadow-black/80 p-6 space-y-5">
+                
+                {/* Photo: Human warmth, sitting with a warm cup, looking peaceful */}
+                <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-white/[0.08]">
                   <Image
-                    src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=1000&q=80"
-                    alt="Espacio seguro y tranquilo de escucha y reflexión"
+                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+                    alt="Persona tranquila desahogándose y encontrando paz"
                     fill
+                    sizes="(max-width: 768px) 100vw, 420px"
                     priority
-                    sizes="(max-width: 768px) 100vw, 500px"
-                    className="object-cover brightness-90 group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover object-center filter brightness-[0.88] contrast-[1.05]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#12131a] via-transparent to-transparent opacity-90" />
+                  
+                  {/* Floating live badge */}
+                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[11px] text-teal-300 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-ping" />
+                    <span>Disponibilidad semanal</span>
+                  </div>
                 </div>
 
-                {/* Floating Social Proof Card */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#09090b]/80 backdrop-blur-md border border-white/[0.08] space-y-1">
-                  <div className="flex items-center gap-2 text-xs font-medium text-purple-300">
-                    <Heart className="w-3.5 h-3.5 fill-purple-400/40 text-purple-400" />
-                    <span>Acompañamiento Humano Genuino</span>
+                {/* Simulated Conversation Box */}
+                <div className="space-y-3 pt-1">
+                  <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.05]">
+                    <div className="w-8 h-8 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-300 shrink-0 text-xs font-semibold">
+                      Tú
+                    </div>
+                    <p className="text-xs text-zinc-300 leading-relaxed">
+                      «Siento que si le cuento esto a mi familia los voy a preocupar, y con mis amigos tengo que fingir que todo va bien...»
+                    </p>
                   </div>
-                  <p className="text-xs text-zinc-300 leading-snug">
-                    «Cuando saqué lo que tenía atorado en el pecho, sentí que volví a respirar por primera vez en semanas.»
-                  </p>
+
+                  <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-purple-500/10 border border-purple-500/20">
+                    <div className="w-8 h-8 rounded-full bg-purple-500/30 border border-purple-400/40 flex items-center justify-center text-purple-200 shrink-0 text-xs font-semibold">
+                      DP
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-xs text-purple-200 font-medium">Desahogo Pro</p>
+                      <p className="text-xs text-zinc-300 leading-relaxed">
+                        Aquí no tienes que fingir nada. Tómate tu tiempo. Tienes 30 minutos de escucha radical para soltar todo sin miedo a ser juzgado.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+
               </div>
             </div>
 
           </div>
         </section>
 
-        {/* ================= STATS / HIGHLIGHT STRIP ================= */}
-        <section className="border-y border-white/[0.08] bg-[#0c0c10]/60 py-8">
+        {/* =========================================================================
+            2. HIGHLIGHT STATS BAR (Proof & Clarity)
+        ========================================================================= */}
+        <section className="border-y border-white/[0.08] bg-[#0c0d14]/70 py-9">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="space-y-1">
-              <p className="font-serif text-2xl sm:text-3xl text-white font-normal">30 Min</p>
-              <p className="text-xs text-zinc-400 uppercase tracking-wider">Escucha Radical</p>
+            <div className="space-y-1.5">
+              <p className="font-serif text-3xl sm:text-4xl text-white font-normal">30 Min</p>
+              <p className="text-xs text-zinc-400 uppercase tracking-widest font-medium">Escucha Radical</p>
             </div>
-            <div className="space-y-1">
-              <p className="font-serif text-2xl sm:text-3xl text-emerald-400 font-normal">$0 COP</p>
-              <p className="text-xs text-zinc-400 uppercase tracking-wider">100% Gratuito</p>
+            <div className="space-y-1.5">
+              <p className="font-serif text-3xl sm:text-4xl text-teal-400 font-normal">$0 COP</p>
+              <p className="text-xs text-zinc-400 uppercase tracking-widest font-medium">Siempre Gratuito</p>
             </div>
-            <div className="space-y-1">
-              <p className="font-serif text-2xl sm:text-3xl text-white font-normal">0 Juicios</p>
-              <p className="text-xs text-zinc-400 uppercase tracking-wider">Cero Filtros</p>
+            <div className="space-y-1.5">
+              <p className="font-serif text-3xl sm:text-4xl text-white font-normal">0 Juicios</p>
+              <p className="text-xs text-zinc-400 uppercase tracking-widest font-medium">Cero Sermones</p>
             </div>
-            <div className="space-y-1">
-              <p className="font-serif text-2xl sm:text-3xl text-purple-300 font-normal">1 a 1</p>
-              <p className="text-xs text-zinc-400 uppercase tracking-wider">Sesión Personal</p>
+            <div className="space-y-1.5">
+              <p className="font-serif text-3xl sm:text-4xl text-purple-300 font-normal">1 a 1</p>
+              <p className="text-xs text-zinc-400 uppercase tracking-widest font-medium">Privacidad Total</p>
             </div>
           </div>
         </section>
 
-        {/* ================= THE PROBLEM SECTION ================= */}
+        {/* =========================================================================
+            3. THE PROBLEM (Empathetic Identification)
+        ========================================================================= */}
         <section id="problema" className="py-24 max-w-6xl mx-auto px-6">
           <div className="max-w-2xl mb-16">
-            <p className="text-xs font-semibold uppercase tracking-widest text-rose-400/90 mb-3">
-              La Carga Silenciosa
+            <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
+              El Problema Real
             </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight mb-4">
-              ¿Por qué tantas veces nos quedamos callados?
+            <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight mb-4">
+              ¿Por qué tantas veces nos guardamos todo?
             </h2>
-            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-              El dolor no siempre pide una solución inmediata; la mayoría de las veces sólo necesita ser reconocido y escuchado en un espacio libre de juicios.
+            <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
+              El dolor y la saturación mental no siempre piden una solución mágica inmediata; la mayoría de las veces sólo necesitan ser expresados y validados en un espacio donde no te juzguen.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-7 rounded-2xl bg-[#111116] border border-white/[0.06] hover:border-white/[0.12] transition-colors space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300">
-                <Lock className="w-5 h-5" />
+            
+            {/* Card 1 */}
+            <div className="p-8 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-500/30 transition-all duration-300 space-y-4 group">
+              <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300 group-hover:scale-110 transition-transform">
+                <VolumeX className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-semibold text-white">Miedo al qué dirán</h3>
+              <h3 className="text-lg font-semibold text-white">El peso del silencio</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Temes que si cuentas lo que te está pasando cambien la forma en que te ven, o que piensen que te estás quejando demasiado.
+                Darle vueltas a lo mismo día y noche agota tu energía mental. Cuando no puedes hablar con tus seres queridos por miedo a preocuparlos, la soledad se vuelve abrumadora.
               </p>
             </div>
 
-            <div className="p-7 rounded-2xl bg-[#111116] border border-white/[0.06] hover:border-white/[0.12] transition-colors space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300">
-                <AlertTriangle className="w-5 h-5" />
+            {/* Card 2 */}
+            <div className="p-8 rounded-3xl glass-panel border border-white/[0.06] hover:border-purple-500/30 transition-all duration-300 space-y-4 group">
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300 group-hover:scale-110 transition-transform">
+                <Lock className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-semibold text-white">No querer ser una molestia</h3>
+              <h3 className="text-lg font-semibold text-white">Miedo a ser juzgado</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Tus seres queridos ya tienen suficientes problemas. Callarte parece la opción más segura, aunque por dentro te estés desmoronando.
+                Temes que si cuentas lo que sientes piensen que eres débil, ingrato o exagerado. Necesitas un espacio neutro donde las apariencias no importen.
               </p>
             </div>
 
-            <div className="p-7 rounded-2xl bg-[#111116] border border-white/[0.06] hover:border-white/[0.12] transition-colors space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300">
-                <Heart className="w-5 h-5" />
+            {/* Card 3 */}
+            <div className="p-8 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-500/30 transition-all duration-300 space-y-4 group">
+              <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300 group-hover:scale-110 transition-transform">
+                <AlertTriangle className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-semibold text-white">Barrera económica real</h3>
+              <h3 className="text-lg font-semibold text-white">La barrera del dinero</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                La salud mental privada es un lujo que muchos no pueden costear mes a mes. Desahogo Pro existe para eliminar esa barrera.
+                La terapia privada es costosa y muchas personas simplemente no tienen el presupuesto en este momento. Desahogo Pro existe para darte una mano sin pedirte nada a cambio.
               </p>
             </div>
+
           </div>
         </section>
 
-        {/* ================= THE OFFER SECTION ================= */}
-        <section id="oferta" className="py-20 bg-[#0d0d12] border-y border-white/[0.08]">
+        {/* =========================================================================
+            4. THE OFFER (30 min Radical Listening breakdown)
+        ========================================================================= */}
+        <section id="oferta" className="py-24 bg-[#0d0e15] border-y border-white/[0.08] relative">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
-              {/* Left: 30 min focus */}
-              <div className="lg:col-span-5 bg-[#14141b] border border-white/[0.08] p-8 sm:p-10 rounded-3xl text-center space-y-4 shadow-xl">
-                <span className="text-xs uppercase tracking-widest text-purple-400 font-semibold">
-                  La Oferta Concreta
+              {/* Left Big Badge Box */}
+              <div className="lg:col-span-5 glass-panel border border-teal-500/20 p-8 sm:p-12 rounded-3xl text-center space-y-4 shadow-2xl relative overflow-hidden">
+                <div className="absolute -top-12 -left-12 w-32 h-32 bg-teal-500/15 rounded-full blur-2xl" />
+                <span className="text-xs uppercase tracking-widest text-teal-400 font-semibold">
+                  La Propuesta Central
                 </span>
-                <div className="font-serif text-7xl sm:text-8xl text-white font-normal leading-none tracking-tight">
+                <div className="font-serif text-8xl sm:text-9xl text-white font-normal leading-none tracking-tight">
                   30
                 </div>
-                <p className="text-lg font-medium text-zinc-200">
+                <p className="text-xl font-medium text-zinc-100">
                   Minutos de Escucha Radical
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 pt-2">
                   <span className="px-3 py-1 rounded-full text-xs bg-zinc-800 text-zinc-300 border border-white/[0.06]">
-                    Sin consejos no solicitados
+                    Sin consejos no pedidos
                   </span>
                   <span className="px-3 py-1 rounded-full text-xs bg-zinc-800 text-zinc-300 border border-white/[0.06]">
                     Sin sermones
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20">
-                    Sin costo alguno
+                  <span className="px-3 py-1 rounded-full text-xs bg-teal-500/20 text-teal-300 border border-teal-500/30 font-medium">
+                    100% Gratuito
                   </span>
                 </div>
               </div>
 
-              {/* Right: What it means */}
+              {/* Right Description */}
               <div className="lg:col-span-7 space-y-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-purple-400">
-                  Un Trato Diferente
+                <p className="text-xs font-semibold uppercase tracking-widest text-teal-400">
+                  ¿En qué consiste?
                 </p>
-                <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight">
-                  No venimos a arreglarte. <br />
+                <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight leading-tight">
+                  No venimos a sermonearte. <br />
                   <span className="italic text-zinc-400">Venimos a escucharte de verdad.</span>
                 </h2>
-                <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
-                  A veces lo único que necesitamos es a alguien con presencia sincera, capaz de sostener el silencio y darte el espacio para que seas tú mismo sin filtros.
+                <p className="text-zinc-300 text-base leading-relaxed">
+                  30 minutos donde lo único que importa es lo que tú quieras decir. No voy a interrumpirte para contarte mi vida, ni a darte frases de autoayuda clichés. Solo presencia humana atenta y respetuosa.
                 </p>
 
                 <div className="space-y-4 pt-2">
                   <div className="flex items-start gap-3.5">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-sm font-semibold text-white">Escucha activa y respetuosa</h4>
-                      <p className="text-xs sm:text-sm text-zinc-400">Tú marcas el ritmo. Hablas de lo que quieras o de lo que puedas.</p>
+                      <h4 className="text-sm font-semibold text-white">Escucha activa y sin interrupciones</h4>
+                      <p className="text-xs sm:text-sm text-zinc-400">Tienes el micrófono abierto para desahogar lo que no has podido pronunciar.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-sm font-semibold text-white">Sin pretensiones ni etiquetas</h4>
-                      <p className="text-xs sm:text-sm text-zinc-400">No hay juicios morales, no hay diagnósticos fríos, no hay recetas prefabricadas.</p>
+                      <h4 className="text-sm font-semibold text-white">Acompañamiento humano y orientación</h4>
+                      <p className="text-xs sm:text-sm text-zinc-400">Si en algún momento identificamos que requieres atención clínica especializada, te orientaremos a encontrarla con respeto y calidez.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-sm font-semibold text-white">Acompañamiento y orientación</h4>
-                      <p className="text-xs sm:text-sm text-zinc-400">Si identificamos que requieres ayuda especializada, te acompañaremos a encontrar las rutas adecuadas.</p>
+                      <h4 className="text-sm font-semibold text-white">Sin registros ni ventas posteriores</h4>
+                      <p className="text-xs sm:text-sm text-zinc-400">Es una labor puramente voluntaria y humanitaria. No hay cobros ocultos ni ofertas comerciales al terminar.</p>
                     </div>
                   </div>
                 </div>
@@ -264,7 +306,7 @@ export default function Home() {
                     href={CALENDAR_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-white text-zinc-950 px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-200 transition-all shadow-md shadow-white/5"
+                    className="inline-flex items-center gap-2.5 bg-gradient-to-r from-teal-400 to-emerald-400 text-zinc-950 px-6 py-3.5 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-teal-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <span>Agendar mi sesión de 30 minutos</span>
                     <ArrowUpRight className="w-4 h-4" />
@@ -276,198 +318,260 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ================= WHAT YOU GET (BENEFITS) ================= */}
+        {/* =========================================================================
+            5. WHAT YOU GET (3 Core Pillars)
+        ========================================================================= */}
         <section id="beneficios" className="py-24 max-w-6xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
               Lo Que Obtienes
             </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight mb-4">
-              Tres pilares fundamentales
+            <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight mb-4">
+              Tres cosas que cambian todo
             </h2>
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-              Lo que ocurre durante los 30 minutos transforma cómo te sientes al terminar.
+              No necesitas pagar una fortuna para experimentar el alivio inmediato de ser escuchado con honestidad.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
             {/* Beneficio 1 */}
-            <div className="p-8 rounded-3xl bg-[#111116] border border-white/[0.08] relative overflow-hidden group hover:border-purple-500/30 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300 mb-6">
+            <div className="p-8 rounded-3xl glass-panel border border-white/[0.08] relative overflow-hidden group hover:border-teal-400/40 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300 mb-6 group-hover:scale-110 transition-transform">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Privacidad Total</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Privacidad Total</h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                Lo que se dice en la sesión, muere en la sesión. No hay grabaciones, no hay registro de nombres legales ni difusión alguna.
+                Lo que se dice en la sesión, muere en la sesión. Sin registros oficiales, sin grabaciones y sin rastro. Tu historia te pertenece sólo a ti.
               </p>
-              <div className="text-xs text-purple-300 font-medium flex items-center gap-1">
-                <span>Confidencialidad absoluta</span>
+              <div className="text-xs text-teal-300 font-medium">
+                Confidencialidad absoluta
               </div>
             </div>
 
             {/* Beneficio 2 */}
-            <div className="p-8 rounded-3xl bg-[#111116] border border-white/[0.08] relative overflow-hidden group hover:border-purple-500/30 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-300 mb-6">
-                <MessageSquare className="w-6 h-6" />
+            <div className="p-8 rounded-3xl glass-panel border border-white/[0.08] relative overflow-hidden group hover:border-purple-400/40 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300 mb-6 group-hover:scale-110 transition-transform">
+                <MessageCircle className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Cero Filtros</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Cero Filtros</h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                Puedes decir las cosas como son, sin adornos ni miedo a &ldquo;quedar mal&rdquo;. Aquí se permite la rabia, el llanto o la duda.
+                Puedes decir las cosas como son, sin adornarlas y sin miedo a &ldquo;quedar mal&rdquo;. Aquí se permite la rabia, la confusión o el llanto sin censura.
               </p>
-              <div className="text-xs text-indigo-300 font-medium flex items-center gap-1">
-                <span>Libertad de expresión plena</span>
+              <div className="text-xs text-purple-300 font-medium">
+                Libertad de expresión plena
               </div>
             </div>
 
             {/* Beneficio 3 */}
-            <div className="p-8 rounded-3xl bg-[#111116] border border-white/[0.08] relative overflow-hidden group hover:border-purple-500/30 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-300 mb-6">
+            <div className="p-8 rounded-3xl glass-panel border border-white/[0.08] relative overflow-hidden group hover:border-teal-400/40 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300 mb-6 group-hover:scale-110 transition-transform">
                 <Sparkles className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Claridad Inmediata</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Claridad Inmediata</h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                Al sacar las palabras de tu cabeza, recuperas el control. Verbalizar organiza los pensamientos que antes parecían un laberinto.
+                Al sacar las palabras de tu cabeza, recuperas el control. Escucharte a ti mismo en voz alta rompe el bucle del ruido mental y te devuelve la paz.
               </p>
-              <div className="text-xs text-emerald-300 font-medium flex items-center gap-1">
-                <span>Desahogo con propósito</span>
+              <div className="text-xs text-teal-300 font-medium">
+                Alivio y enfoque renovado
               </div>
             </div>
+
           </div>
         </section>
 
-        {/* ================= SECOND EDITORIAL VISUAL / QUOTE ================= */}
-        <section className="max-w-6xl mx-auto px-6 py-12">
-          <div className="relative rounded-3xl overflow-hidden border border-white/[0.08]">
-            <div className="relative h-[320px] sm:h-[400px] w-full">
-              <Image
-                src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80"
-                alt="Paz mental, meditación y calma"
-                fill
-                sizes="(max-width: 1200px) 100vw, 1200px"
-                className="object-cover brightness-[0.4]"
-              />
-              <div className="absolute inset-0 flex items-center justify-center p-8 text-center bg-black/40 backdrop-blur-[2px]">
-                <div className="max-w-2xl space-y-4">
-                  <p className="font-serif italic text-2xl sm:text-3xl text-zinc-100 font-normal leading-relaxed">
-                    &ldquo;Hablar de lo que te duele no es señal de debilidad; es el primer acto consciente de valentía para sanar.&rdquo;
-                  </p>
-                  <p className="text-xs uppercase tracking-widest text-purple-300 font-medium">
-                    Desahogo Pro · Acompañamiento Humano
-                  </p>
+        {/* =========================================================================
+            6. COMPARISON: "Guardártelo vs. Desahogarte" (High-Conversion Therapy Pattern)
+        ========================================================================= */}
+        <section className="py-20 bg-[#0c0d13] border-y border-white/[0.08]">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal mb-3">
+                ¿Qué pasa cuando decides hablar?
+              </h2>
+              <p className="text-zinc-400 text-sm">
+                La diferencia entre seguir cargando solo o permitirte soltar la carga.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              {/* Opción 1: Seguir callado */}
+              <div className="p-6 sm:p-8 rounded-3xl bg-red-950/10 border border-red-500/20 space-y-4">
+                <div className="flex items-center gap-2 text-red-400 font-semibold text-sm">
+                  <XCircle className="w-5 h-5 shrink-0" />
+                  <span>Guardártelo todo en silencio</span>
                 </div>
+                <ul className="space-y-3 text-xs sm:text-sm text-zinc-400">
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-400 font-bold">•</span>
+                    <span>El ruido mental aumenta y te quita horas de sueño y descanso.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-400 font-bold">•</span>
+                    <span>Sientes irritabilidad o desconexión con las personas que te rodean.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-400 font-bold">•</span>
+                    <span>La sensación de soledad se vuelve más pesada cada semana.</span>
+                  </li>
+                </ul>
               </div>
+
+              {/* Opción 2: 30 min Desahogo Pro */}
+              <div className="p-6 sm:p-8 rounded-3xl bg-teal-950/15 border border-teal-500/30 space-y-4 shadow-xl shadow-teal-950/20">
+                <div className="flex items-center gap-2 text-teal-300 font-semibold text-sm">
+                  <CheckCircle2 className="w-5 h-5 shrink-0 text-teal-400" />
+                  <span>30 minutos en Desahogo Pro</span>
+                </div>
+                <ul className="space-y-3 text-xs sm:text-sm text-zinc-300">
+                  <li className="flex items-start gap-2">
+                    <span className="text-teal-400 font-bold">•</span>
+                    <span>Sueltas las palabras atragantadas sin temor a herir o decepcionar.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-teal-400 font-bold">•</span>
+                    <span>Recuperas claridad, perspectiva y una sensación real de ligereza.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-teal-400 font-bold">•</span>
+                    <span>Sabes que hay alguien dispuesto a escucharte de verdad, sin costo.</span>
+                  </li>
+                </ul>
+              </div>
+
             </div>
           </div>
         </section>
 
-        {/* ================= HOW IT WORKS ================= */}
+        {/* =========================================================================
+            7. HOW IT WORKS (Simple 3 steps)
+        ========================================================================= */}
         <section id="como-funciona" className="py-24 max-w-6xl mx-auto px-6">
           <div className="max-w-2xl mb-16">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
-              Paso a Paso
+            <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
+              Proceso Transparente
             </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight mb-4">
-              ¿Cómo funciona? Es simple y directo.
+            <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight mb-4">
+              Tres pasos. Sin complicaciones.
             </h2>
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-              Sin trámites burocráticos ni formularios invasivos. En menos de dos minutos tienes tu cita lista.
+              No tienes que llenar cuestionarios invasivos ni dar tu tarjeta de crédito. Solo dos minutos para elegir tu hora.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <div className="space-y-3 relative p-6 rounded-2xl bg-[#111116] border border-white/[0.06]">
-              <span className="font-serif text-3xl text-purple-300">01</span>
-              <h3 className="text-base font-semibold text-white">Eliges tu horario</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div className="space-y-3 p-8 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-500/30 transition-all">
+              <span className="font-serif text-4xl text-teal-300 font-normal">01</span>
+              <h3 className="text-lg font-semibold text-white">Reserva tu horario</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Ingresas al calendario de Google, seleccionas el día y la hora que te queden cómodos y reservas tu espacio.
+                Haz clic en el botón de reserva, selecciona el horario que mejor te convenga en Google Calendar y listo.
               </p>
             </div>
 
-            <div className="space-y-3 relative p-6 rounded-2xl bg-[#111116] border border-white/[0.06]">
-              <span className="font-serif text-3xl text-purple-300">02</span>
-              <h3 className="text-base font-semibold text-white">Nos conectamos</h3>
+            <div className="space-y-3 p-8 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-500/30 transition-all">
+              <span className="font-serif text-4xl text-teal-300 font-normal">02</span>
+              <h3 className="text-lg font-semibold text-white">Nos conectamos</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Recibirás el enlace privado de videollamada o audio. Puedes prender tu cámara o mantenerla apagada si te hace sentir más seguro.
+                Recibirás un enlace privado de videollamada o audio. Puedes mantener tu cámara apagada si así te sientes más cómodo.
               </p>
             </div>
 
-            <div className="space-y-3 relative p-6 rounded-2xl bg-[#111116] border border-white/[0.06]">
-              <span className="font-serif text-3xl text-purple-300">03</span>
-              <h3 className="text-base font-semibold text-white">Sueltas la carga</h3>
+            <div className="space-y-3 p-8 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-500/30 transition-all">
+              <span className="font-serif text-4xl text-teal-300 font-normal">03</span>
+              <h3 className="text-lg font-semibold text-white">Sueltas la carga</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                30 minutos dedicados exclusivamente a ti. Sin interrupciones, sin lecciones morales. Solo escucha honesta.
+                30 minutos de escucha honesta y radical. Al terminar, respirarás con más calma y perspectiva.
               </p>
             </div>
+
           </div>
         </section>
 
-        {/* ================= FINAL CALL TO ACTION ================= */}
-        <section className="py-24 border-t border-white/[0.08] bg-gradient-to-b from-transparent via-purple-950/10 to-transparent">
-          <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-purple-500/20 bg-purple-500/10 text-purple-300 text-xs">
-              <Compass className="w-3.5 h-3.5" />
-              <span>Da el paso hoy mismo</span>
+        {/* =========================================================================
+            8. FINAL CONVERSION SECTION (High Visibility CTA)
+        ========================================================================= */}
+        <section className="py-24 border-t border-white/[0.08] relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal-950/15 to-transparent pointer-events-none" />
+          
+          <div className="relative max-w-4xl mx-auto px-6 text-center space-y-7">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-300 text-xs font-medium">
+              <Smile className="w-4 h-4 text-teal-400" />
+              <span>Tu bienestar no tiene precio</span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight leading-tight">
-              No tienes que cargar con todo <br className="hidden sm:inline" />
-              en silencio.
+            <h2 className="font-serif text-3xl sm:text-6xl text-white font-normal tracking-tight leading-tight">
+              No tienes que seguir cargando <br className="hidden sm:inline" />
+              con todo en silencio.
             </h2>
 
-            <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-              30 minutos pueden marcar la diferencia entre seguir dándole vueltas en la cabeza o recuperar la calma y la claridad.
+            <p className="text-zinc-300 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+              Un clic es todo lo que te separa de 30 minutos de paz y escucha sincera. Sin costo, sin sermones y con total anonimato.
             </p>
 
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href={CALENDAR_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-zinc-950 px-8 py-4 rounded-xl text-sm font-semibold hover:bg-zinc-200 transition-all shadow-xl shadow-white/5 active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-teal-400 via-emerald-400 to-teal-300 text-zinc-950 px-8 py-4 rounded-full text-base font-semibold hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
               >
-                <span>Reservar mi espacio ahora</span>
-                <ArrowUpRight className="w-4 h-4 opacity-70" />
+                <span>Reservar mi espacio gratis ahora</span>
+                <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
 
-            <p className="text-xs text-zinc-400 pt-2">
-              Calendario sincronizado con Google · Sesiones 100% gratuitas
-            </p>
+            <div className="flex items-center justify-center gap-6 text-xs text-zinc-400 pt-3">
+              <span className="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-teal-400" />
+                Agendamiento directo
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Lock className="w-3.5 h-3.5 text-teal-400" />
+                Sin registros públicos
+              </span>
+            </div>
           </div>
         </section>
 
-        {/* ================= FAQ SECTION ================= */}
+        {/* =========================================================================
+            9. FAQ SECTION
+        ========================================================================= */}
         <FAQSection />
 
-        {/* ================= MANDATORY LEGAL DISCLAIMER BANNER ================= */}
-        <section className="py-14 border-t border-white/[0.08] bg-[#0c0c11]">
+        {/* =========================================================================
+            10. MANDATORY LEGAL DISCLAIMER & EMERGENCY HELPLINES
+        ========================================================================= */}
+        <section className="py-14 border-t border-white/[0.08] bg-[#090a0f]">
           <div className="max-w-4xl mx-auto px-6">
-            <div className="p-6 sm:p-8 rounded-2xl bg-rose-950/20 border border-rose-500/20 space-y-4">
-              <div className="flex items-center gap-2 text-rose-400 font-semibold text-xs tracking-wider uppercase">
+            <div className="p-7 rounded-3xl bg-rose-950/20 border border-rose-500/30 space-y-4 shadow-xl">
+              <div className="flex items-center gap-2.5 text-rose-400 font-semibold text-xs tracking-wider uppercase">
                 <AlertTriangle className="w-4 h-4 shrink-0" />
-                <span>Aviso Legal y Descargo de Responsabilidad (Disclaimer)</span>
+                <span>Descargo de Responsabilidad Legal y Ético (Disclaimer)</span>
               </div>
 
-              <div className="space-y-3 text-xs sm:text-[13px] text-zinc-300 leading-relaxed">
+              <div className="space-y-2.5 text-xs sm:text-sm text-zinc-300 leading-relaxed">
                 <p>
                   <strong>Este espacio es un servicio voluntario, gratuito y de carácter espiritual-humanitario.</strong> Quien facilita estas sesiones no es terapeuta profesional, no es psicólogo con licencia ni psiquiatra. <strong>No reemplaza ningún tratamiento médico, psicológico o psiquiátrico.</strong>
                 </p>
                 <p>
-                  <strong>Lo que ofrezco:</strong> escucha activa, acompañamiento humano y orientación. Si en algún momento identificamos que necesitas atención especializada, te acompañaré a encontrarla.
+                  <strong>Lo que ofrezco:</strong> escucha activa, acompañamiento humano y orientación. Si en algún momento identificamos que necesitas atención especializada, te acompañaré a encontrarla con todo el respeto.
                 </p>
               </div>
 
-              {/* Inmediate Danger Helplines */}
-              <div className="pt-2 border-t border-rose-500/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+              {/* Helplines for Immediate Life Danger */}
+              <div className="pt-3 border-t border-rose-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
                 <p className="text-rose-300 font-medium">
-                  🚨 Si estás en peligro inmediato o crisis severa:
+                  🚨 Si estás en peligro inmediato o crisis vital severa:
                 </p>
-                <div className="flex items-center gap-4 font-semibold text-rose-400">
-                  <a href="tel:123" className="underline hover:text-rose-300">
+                <div className="flex flex-wrap items-center gap-4 font-semibold text-rose-400">
+                  <a href="tel:123" className="underline hover:text-rose-200">
                     Llama al 123 (Policía Colombia)
                   </a>
-                  <a href="tel:106" className="underline hover:text-rose-300">
-                    Línea 106 (Salud Mental 24h)
+                  <a href="tel:106" className="underline hover:text-rose-200">
+                    Línea 106 (Salud Mental Gratuita 24h)
                   </a>
                 </div>
               </div>
