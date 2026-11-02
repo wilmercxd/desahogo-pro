@@ -25,30 +25,34 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://desahogo-pro.vercel.app"),
   title: {
-    default: "Desahogo Pro — Ayuda Emocional y Escucha Radical Gratuita en Colombia | Espacio Anónimo",
+    default: "Psicólogo Gratis y Apoyo Emocional en Colombia | Desahogo Pro — Escucha Radical Anónima",
     template: "%s | Desahogo Pro Colombia",
   },
   description:
-    "¿Te sientes solo, triste o abrumado y no tienes dinero para terapia psicológica privada? En Desahogo Pro te brindamos 30 minutos de escucha radical, anónima y 100% gratuita en Colombia. Sin juicios, sin sermones y con total privacidad.",
+    "¿No tienes con quién hablar o no puedes pagar un psicólogo privado? En Desahogo Pro recibes 30 minutos de escucha radical, apoyo emocional anónimo y 100% gratuito en Colombia. Alivia el ataque de ansiedad, la soledad y el sobrepensar sin juicios.",
   applicationName: "Desahogo Pro",
   authors: [{ name: "Desahogo Pro Colombia" }],
   generator: "Next.js",
   keywords: [
-    // Trends de búsqueda en Colombia
-    "ayuda psicologica gratis colombia",
-    "apoyo emocional gratuito colombia",
+    // Búsquedas de alto volumen durante el año en Colombia
+    "psicologo gratis colombia",
+    "ayuda psicologica gratis",
     "con quien hablar si me siento solo",
+    "no tengo con quien hablar",
+    "que hacer en un ataque de ansiedad",
+    "como dejar de sobrepensar",
+    "apoyo emocional gratuito colombia",
+    "chat de ayuda psicologica gratis",
+    "linea 106 bogota whatsapp",
+    "linea de atencion en crisis colombia",
+    "terapia psicologica gratis online",
     "desahogo emocional anonimo",
-    "espacio para hablar gratis",
-    "psicologia gratis bogota medellin cali",
     "primeros auxilios psicologicos colombia",
-    "linea 106 salud mental",
+    "lineas de salud mental medellin cali barranquilla",
     "escuchaderos colombia",
-    "escucha activa y orientacion humana",
-    "ansiedad depresion con quien hablar gratis",
-    "ruido mental y estres",
-    "servicio voluntario de escucha",
-    "atencion en crisis emocional colombia",
+    "ruido mental ansiedad depresion",
+    "con quien desahogarme gratis",
+    "dolor en el pecho tristeza vacio emocional",
   ],
   alternates: {
     canonical: "https://desahogo-pro.vercel.app",
@@ -58,9 +62,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Desahogo Pro — El fin del ruido mental | Escucha Radical Gratuita y Anónima",
+    title: "Psicólogo Gratis y Apoyo Emocional Anónimo en Colombia | Desahogo Pro",
     description:
-      "30 minutos de escucha activa y humana para cuando no puedes pagar terapia psicológica privada y necesitas soltar lo que llevas dentro sin ser juzgado.",
+      "30 minutos de escucha radical y primeros auxilios emocionales en Colombia. Cuando no tienes con quién hablar o no puedes pagar terapia privada.",
     url: "https://desahogo-pro.vercel.app",
     siteName: "Desahogo Pro",
     locale: "es_CO",
@@ -70,13 +74,13 @@ export const metadata: Metadata = {
         url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&h=630&q=85",
         width: 1200,
         height: 630,
-        alt: "Desahogo Pro - Espacio gratuito de escucha radical y apoyo emocional en Colombia",
+        alt: "Desahogo Pro - Apoyo emocional y escucha gratuita en Colombia para ansiedad, soledad y ruido mental",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Desahogo Pro — Ayuda Emocional y Escucha Gratuita en Colombia",
+    title: "Apoyo Emocional y Escucha Gratuita en Colombia | Desahogo Pro",
     description:
       "30 minutos de escucha radical y confidencial. Sin costo, sin sermones y sin juicio.",
     images: [
@@ -113,9 +117,14 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": "https://desahogo-pro.vercel.app/#website",
         "url": "https://desahogo-pro.vercel.app",
-        "name": "Desahogo Pro Colombia",
-        "description": "Espacio voluntario gratuito de escucha radical y acompañamiento emocional anónimo.",
+        "name": "Desahogo Pro Colombia - Apoyo Emocional y Escucha Gratuita",
+        "description": "Espacio voluntario gratuito y anónimo de escucha radical para quienes no pueden costear terapia psicológica privada.",
         "inLanguage": "es-CO",
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": "https://calendar.app.google/QUHZjk8fuGqnutdF9",
+          "name": "Reservar 30 Minutos de Escucha Gratis"
+        }
       },
       {
         "@type": "Organization",
@@ -134,8 +143,8 @@ export default function RootLayout({
       {
         "@type": "Service",
         "@id": "https://desahogo-pro.vercel.app/#service",
-        "name": "30 Minutos de Escucha Radical Gratuita",
-        "serviceType": "Apoyo Emocional y Escucha Activa",
+        "name": "Apoyo Emocional y Escucha Radical 30 Minutos",
+        "serviceType": "Primeros Auxilios Emocionales y Escucha Activa",
         "provider": {
           "@id": "https://desahogo-pro.vercel.app/#organization"
         },
@@ -148,7 +157,7 @@ export default function RootLayout({
           "availability": "https://schema.org/InStock",
           "url": "https://calendar.app.google/QUHZjk8fuGqnutdF9"
         },
-        "description": "Sesión individual de 30 minutos de escucha atenta, empática y confidencial sin costo para desahogo de ruido mental, tristeza, soledad o estrés."
+        "description": "Sesión individual de 30 minutos de escucha atenta, empática y confidencial sin costo para desahogo de ansiedad, sobrepensar, tristeza, soledad o estrés en Colombia."
       }
     ]
   };

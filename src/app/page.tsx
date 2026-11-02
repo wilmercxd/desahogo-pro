@@ -16,9 +16,11 @@ import {
   Smile,
   Compass,
   Phone,
-  MessageSquareQuote,
   MapPin,
-  ExternalLink,
+  HelpCircle,
+  Brain,
+  Zap,
+  Coffee,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -37,7 +39,7 @@ export default function Home() {
         <div className="absolute top-[800px] -right-20 w-[400px] h-[400px] bg-purple-900/10 blur-[120px] pointer-events-none rounded-full" />
 
         {/* =========================================================================
-            1. HERO SECTION (Optimizado para SEO en Colombia y Alta Conversión)
+            1. HERO SECTION (Optimizado para Búsquedas Frecuentes en Colombia)
         ========================================================================= */}
         <section className="relative max-w-6xl mx-auto px-6 pt-10 pb-16 md:py-20" aria-labelledby="hero-heading">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -48,21 +50,21 @@ export default function Home() {
               {/* Status Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-300 text-xs font-medium backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-                <span>Apoyo emocional voluntario en Colombia · 100% Anónimo y Gratuito</span>
+                <span>¿Buscas psicólogo gratis o alguien con quien hablar en Colombia?</span>
               </div>
 
-              {/* Main Headline H1 with Target Keywords */}
+              {/* Main Headline H1 with Top Annual Search Intent */}
               <h1 id="hero-heading" className="font-serif text-4xl sm:text-6xl text-white font-normal tracking-tight leading-[1.08]">
-                Desahogo Pro: El fin del <br />
+                El fin del ruido mental. <br />
                 <em className="italic text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-purple-300 to-indigo-300">
-                  ruido mental en Colombia.
+                  Escucha radical sin costo.
                 </em>
               </h1>
 
               {/* Problem Hook Statement */}
               <p className="text-zinc-300 text-base sm:text-lg max-w-xl leading-relaxed">
-                ¿Estás atravesando un momento difícil y no tienes dinero para costear terapia psicológica privada? 
-                Aquí tienes un espacio seguro para hablar con alguien sin filtros, sin sermones y sin costo.
+                Cuando la terapia privada no está a tu alcance económico y no tienes con quién hablar para no preocupar a tu familia ni ser juzgado: 
+                aquí tienes <strong>30 minutos de escucha radical</strong>, anónima y 100% gratuita.
               </p>
 
               {/* Call To Action Button Group */}
@@ -73,15 +75,15 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-teal-400 via-emerald-400 to-teal-300 text-zinc-950 px-7 py-4 rounded-full text-[15px] font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20 hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  <span>Reservar 30 Minutos Gratis</span>
+                  <span>Hablar con alguien gratis ahora</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
 
                 <a
-                  href="#lineas-colombia"
+                  href="#motivos"
                   className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-sm font-medium text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] transition-colors"
                 >
-                  Líneas de ayuda en Colombia
+                  ¿Qué estás sintiendo hoy?
                 </a>
               </div>
 
@@ -89,20 +91,20 @@ export default function Home() {
               <div className="pt-3 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-zinc-400">
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-teal-400" />
-                  <span>Sin costo ni suscripciones</span>
+                  <span>Sin costo ($0 COP) · Sin tarjetas</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Lock className="w-4 h-4 text-purple-400" />
-                  <span>100% Anónimo y Confidencial</span>
+                  <span>100% Privado, anónimo y seguro</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <MapPin className="w-4 h-4 text-zinc-300" />
-                  <span>Bogotá, Medellín, Cali y todo el país</span>
+                  <Clock className="w-4 h-4 text-zinc-300" />
+                  <span>Sesión individual de 30 minutos</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Visual Column (Card + Human connection illustration) */}
+            {/* Right Visual Column (Simulación cálida de acompañamiento) */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden glass-panel border border-white/[0.1] shadow-2xl shadow-black/80 p-6 space-y-5">
                 
@@ -110,7 +112,7 @@ export default function Home() {
                 <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-white/[0.08]">
                   <Image
                     src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
-                    alt="Persona encontrando tranquilidad y desahogo emocional en una conversación cálida"
+                    alt="Persona encontrando alivio emocional y calma al hablar en un espacio seguro"
                     fill
                     sizes="(max-width: 768px) 100vw, 420px"
                     priority
@@ -121,7 +123,7 @@ export default function Home() {
                   {/* Floating live badge */}
                   <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[11px] text-teal-300 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-ping" />
-                    <span>Espacios disponibles esta semana</span>
+                    <span>Citas disponibles esta semana</span>
                   </div>
                 </div>
 
@@ -132,7 +134,7 @@ export default function Home() {
                       Tú
                     </div>
                     <p className="text-xs text-zinc-300 leading-relaxed">
-                      «Siento que si le cuento esto a mi familia los voy a preocupar, y con mis amigos tengo que fingir que todo va bien...»
+                      «Siento que sobrepienso todo y llevo semanas sin poder dormir bien ni desahogarme con nadie...»
                     </p>
                   </div>
 
@@ -143,7 +145,7 @@ export default function Home() {
                     <div className="space-y-1">
                       <p className="text-xs text-purple-200 font-medium">Desahogo Pro</p>
                       <p className="text-xs text-zinc-300 leading-relaxed">
-                        Aquí no tienes que fingir nada. Tómate tu tiempo. Tienes 30 minutos de escucha radical para soltar todo sin miedo a ser juzgado.
+                        Aquí no tienes que fingir que todo está bien. Tienes 30 minutos de escucha radical para soltar la carga sin ningún juicio.
                       </p>
                     </div>
                   </div>
@@ -166,11 +168,11 @@ export default function Home() {
             </div>
             <div className="space-y-1.5">
               <p className="font-serif text-3xl sm:text-4xl text-teal-400 font-normal">$0 COP</p>
-              <p className="text-xs text-zinc-400 uppercase tracking-widest font-medium">Siempre Gratuito</p>
+              <p className="text-xs text-zinc-400 uppercase tracking-widest font-medium">100% Gratuito</p>
             </div>
             <div className="space-y-1.5">
               <p className="font-serif text-3xl sm:text-4xl text-white font-normal">0 Juicios</p>
-              <p className="text-xs text-zinc-400 uppercase tracking-widest font-medium">Cero Sermones</p>
+              <p className="text-xs text-zinc-400 uppercase tracking-widest font-medium">Sin Sermones</p>
             </div>
             <div className="space-y-1.5">
               <p className="font-serif text-3xl sm:text-4xl text-purple-300 font-normal">1 a 1</p>
@@ -180,56 +182,103 @@ export default function Home() {
         </section>
 
         {/* =========================================================================
-            3. THE PROBLEM (Empathetic Identification)
+            3. NUEVA SECCIÓN SEO: ¿QUÉ ESTÁS SINTIENDO HOY?
+            (Mapeo de las consultas con mayor volumen anual en Colombia)
         ========================================================================= */}
-        <section id="problema" className="py-24 max-w-6xl mx-auto px-6">
-          <div className="max-w-2xl mb-16">
-            <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
-              ¿Por qué cuesta tanto hablar?
-            </p>
+        <section id="motivos" className="py-24 max-w-6xl mx-auto px-6">
+          <div className="max-w-3xl mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-xs font-semibold uppercase tracking-widest mb-3">
+              <Heart className="w-3.5 h-3.5" />
+              <span>Identifica tu situación</span>
+            </div>
             <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight mb-4">
-              Estás cargando con algo que no puedes contarle a nadie
+              ¿Qué te está pasando hoy? No estás solo.
             </h2>
             <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
-              En Colombia, miles de personas experimentan soledad, ansiedad, tristeza o sobrecarga mental diaria. Sin embargo, encontrar un oído atento sin tener que pagar altos honorarios privados suele ser una odisea.
+              Las búsquedas más frecuentes en Colombia reflejan que miles de personas están pasando por lo mismo que tú. Desahogo Pro es un espacio diseñado para escucharte en cualquiera de estas situaciones:
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            {/* Card 1 */}
-            <div className="p-8 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-500/30 transition-all duration-300 space-y-4 group">
-              <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300 group-hover:scale-110 transition-transform">
-                <VolumeX className="w-6 h-6" />
+            {/* Card 1: Sobrepensar */}
+            <div className="p-7 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-400/40 transition-all space-y-3.5">
+              <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300">
+                <Brain className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-semibold text-white">El agotamiento del silencio</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                Darle vueltas a los mismos problemas una y otra vez agota tu energía y tu paz. Guardártelo todo para no preocupar a tu familia solo multiplica la soledad.
+              <h3 className="text-base font-semibold text-white">Sobrepensar todo y no poder apagar la mente</h3>
+              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                Das vueltas al pasado, imaginas los peores escenarios del futuro y el insomnio no te deja descansar. Verbalizar lo que sientes rompe el bucle mental de inmediato.
               </p>
             </div>
 
-            {/* Card 2 */}
-            <div className="p-8 rounded-3xl glass-panel border border-white/[0.06] hover:border-purple-500/30 transition-all duration-300 space-y-4 group">
-              <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300 group-hover:scale-110 transition-transform">
-                <Lock className="w-6 h-6" />
+            {/* Card 2: Ansiedad y Angustia */}
+            <div className="p-7 rounded-3xl glass-panel border border-white/[0.06] hover:border-purple-400/40 transition-all space-y-3.5">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300">
+                <Zap className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-semibold text-white">El miedo a ser juzgado</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                Temes que al confesar tus dudas, miedos o errores cambie la forma en que los demás te ven. Necesitas un espacio completamente anónimo donde no tengas que fingir fortaleza.
+              <h3 className="text-base font-semibold text-white">Ataques de ansiedad o nudo en el pecho</h3>
+              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                Sensación de opresión, falta de aire o miedo inexplicable. Tener a alguien presente que te escuche con calma te ayuda a regular el sistema nervioso y recuperar el aliento.
               </p>
             </div>
 
-            {/* Card 3 */}
-            <div className="p-8 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-500/30 transition-all duration-300 space-y-4 group">
-              <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300 group-hover:scale-110 transition-transform">
-                <AlertTriangle className="w-6 h-6" />
+            {/* Card 3: Soledad */}
+            <div className="p-7 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-400/40 transition-all space-y-3.5">
+              <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300">
+                <VolumeX className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-semibold text-white">La barrera del dinero en salud mental</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                Una consulta de psicología privada en Colombia oscila frecuentemente entre $100.000 y $250.000 COP por hora, siendo inaccesible para la mayoría. Desahogo Pro existe para darte una mano sin pedirte dinero.
+              <h3 className="text-base font-semibold text-white">«No tengo con quién hablar y me siento solo»</h3>
+              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                Estar rodeado de gente y aun así sentirte profundamente incomprendido. En esta sesión no tienes que aparentar éxito ni fortaleza; puedes ser tú al 100%.
               </p>
             </div>
 
+            {/* Card 4: Ruptura amorosa / Duelo */}
+            <div className="p-7 rounded-3xl glass-panel border border-white/[0.06] hover:border-purple-400/40 transition-all space-y-3.5">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300">
+                <Heart className="w-5 h-5" />
+              </div>
+              <h3 className="text-base font-semibold text-white">Ruptura amorosa o crisis de pareja</h3>
+              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                Tus amigos ya se cansaron de escuchar el tema y no quieres seguir molestándolos. Aquí tienes 30 minutos sin prisas para llorar, recordar o soltar la pena.
+              </p>
+            </div>
+
+            {/* Card 5: Falta de dinero para terapia */}
+            <div className="p-7 rounded-3xl glass-panel border border-white/[0.06] hover:border-teal-400/40 transition-all space-y-3.5">
+              <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h3 className="text-base font-semibold text-white">Buscar psicólogo gratis en Colombia sin citas de 3 meses</h3>
+              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                Las citas por EPS tardan meses y la consulta privada es costosa. Desahogo Pro es un puente voluntario e inmediato para recibir primeros auxilios de escucha hoy mismo.
+              </p>
+            </div>
+
+            {/* Card 6: Estrés laboral y Burnout */}
+            <div className="p-7 rounded-3xl glass-panel border border-white/[0.06] hover:border-purple-400/40 transition-all space-y-3.5">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300">
+                <Coffee className="w-5 h-5" />
+              </div>
+              <h3 className="text-base font-semibold text-white">Sobrecarga laboral, agotamiento y desmotivación</h3>
+              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                Sientes que ya no das más con la rutina y las exigencias diarias. Un respiro de media hora para hablar de tus límites sin temor a ser etiquetado.
+              </p>
+            </div>
+
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href={CALENDAR_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-400 to-emerald-400 text-zinc-950 px-7 py-3.5 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-teal-500/20 transition-all"
+            >
+              <span>Desahogarme gratis en 30 minutos</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
           </div>
         </section>
 
@@ -244,7 +293,7 @@ export default function Home() {
               <div className="lg:col-span-5 glass-panel border border-teal-500/20 p-8 sm:p-12 rounded-3xl text-center space-y-4 shadow-2xl relative overflow-hidden">
                 <div className="absolute -top-12 -left-12 w-32 h-32 bg-teal-500/15 rounded-full blur-2xl" />
                 <span className="text-xs uppercase tracking-widest text-teal-400 font-semibold">
-                  La Oferta Concreta
+                  La Propuesta Central
                 </span>
                 <div className="font-serif text-8xl sm:text-9xl text-white font-normal leading-none tracking-tight">
                   30
@@ -268,7 +317,7 @@ export default function Home() {
               {/* Right Description */}
               <div className="lg:col-span-7 space-y-6">
                 <p className="text-xs font-semibold uppercase tracking-widest text-teal-400">
-                  ¿En qué consiste?
+                  ¿Por qué la escucha activa marca la diferencia?
                 </p>
                 <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight leading-tight">
                   No venimos a sermonearte. <br />
@@ -346,7 +395,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Privacidad Total</h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                Lo que se dice en la sesión, muere en la sesión. Sin registros oficiales, sin grabaciones y sin rastro. Tu tranquilidad y anonimato están protegidos.
+                Lo que se dice en la sesión, muere en la sesión. Sin registros oficiales, sin grabaciones y sin rastro. Tu tranquilidad y anonimato están 100% protegidos.
               </p>
               <div className="text-xs text-teal-300 font-medium">
                 Confidencialidad absoluta
@@ -360,7 +409,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Cero Filtros</h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                Puedes decir las cosas como son, sin miedo a &ldquo;quedar mal&rdquo;. Aquí se permite la rabia, la confusión o el llanto sin máscaras ni etiquetas.
+                Puedes decir las cosas como son, sin adornarlas y sin miedo a &ldquo;quedar mal&rdquo;. Aquí se permite la rabia, la confusión o el llanto sin máscaras ni etiquetas.
               </p>
               <div className="text-xs text-purple-300 font-medium">
                 Libertad de expresión plena
@@ -450,13 +499,12 @@ export default function Home() {
 
         {/* =========================================================================
             7. SEO DIRECTORY: GUÍA DE LÍNEAS DE AYUDA Y SALUD MENTAL EN COLOMBIA
-            (Clave para captar búsquedas orgánicas en Google Colombia con alto E-E-A-T)
         ========================================================================= */}
         <section id="lineas-colombia" className="py-24 max-w-6xl mx-auto px-6 border-b border-white/[0.08]">
           <div className="max-w-3xl mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-semibold uppercase tracking-widest mb-3">
               <Phone className="w-3.5 h-3.5" />
-              <span>Directorio de Apoyo en Colombia</span>
+              <span>Directorio de Ayuda Psicológica en Colombia</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight mb-4">
               Líneas de atención y apoyo psicológico gratuito en Colombia
@@ -482,7 +530,7 @@ export default function Home() {
                 <a href="tel:106" className="text-teal-400 font-semibold hover:underline flex items-center gap-1">
                   Marcar al 106 (Gratis)
                 </a>
-                <span className="text-zinc-400">WhatsApp: 300 754 8933</span>
+                <span className="text-zinc-400">WhatsApp Bogotá: 300 754 8933</span>
               </div>
             </div>
 
@@ -582,7 +630,7 @@ export default function Home() {
               ¿Cómo funciona? En tres pasos sencillos.
             </h2>
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-              No tienes que llenar cuestionarios invasivos ni dar tu tarjeta de crédito. Solo dos minutos para elegir tu hora en el calendario.
+              No tienes que llenar cuestionarios invasivos ni dar tu tarjeta de crédito. Solo dos minutos para elegir tu hora en el calendario de Google.
             </p>
           </div>
 
