@@ -15,6 +15,10 @@ import {
   VolumeX,
   Smile,
   Compass,
+  Phone,
+  MessageSquareQuote,
+  MapPin,
+  ExternalLink,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -29,13 +33,13 @@ export default function Home() {
 
       <main className="relative pt-24 pb-16 overflow-hidden">
         {/* Ambient atmospheric lighting */}
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-gradient-to-b from-purple-600/10 via-teal-500/5 to-transparent blur-[140px] pointer-events-none rounded-full" />
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-gradient-to-b from-purple-600/10 via-teal-500/5 to-transparent blur-[140px] pointer-events-none rounded-full" />
         <div className="absolute top-[800px] -right-20 w-[400px] h-[400px] bg-purple-900/10 blur-[120px] pointer-events-none rounded-full" />
 
         {/* =========================================================================
-            1. HERO SECTION (High emotional resonance + Selia/BetterHelp trust cues)
+            1. HERO SECTION (Optimizado para SEO en Colombia y Alta Conversión)
         ========================================================================= */}
-        <section className="relative max-w-6xl mx-auto px-6 pt-10 pb-16 md:py-20">
+        <section className="relative max-w-6xl mx-auto px-6 pt-10 pb-16 md:py-20" aria-labelledby="hero-heading">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
             {/* Left Content Column */}
@@ -44,22 +48,21 @@ export default function Home() {
               {/* Status Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-300 text-xs font-medium backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-                <span>Espacio voluntario gratuito · Confidencial y anónimo</span>
+                <span>Apoyo emocional voluntario en Colombia · 100% Anónimo y Gratuito</span>
               </div>
 
-              {/* Main Headline */}
-              <h1 className="font-serif text-4xl sm:text-6xl text-white font-normal tracking-tight leading-[1.08]">
-                El fin del <br />
+              {/* Main Headline H1 with Target Keywords */}
+              <h1 id="hero-heading" className="font-serif text-4xl sm:text-6xl text-white font-normal tracking-tight leading-[1.08]">
+                Desahogo Pro: El fin del <br />
                 <em className="italic text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-purple-300 to-indigo-300">
-                  ruido mental.
+                  ruido mental en Colombia.
                 </em>
               </h1>
 
               {/* Problem Hook Statement */}
               <p className="text-zinc-300 text-base sm:text-lg max-w-xl leading-relaxed">
-                Estás cargando con algo que no puedes contarle a tus amigos para no
-                preocuparlos, ni a tu familia para no ser juzgado. Ese peso te
-                quita energía, enfoque y paz.
+                ¿Estás atravesando un momento difícil y no tienes dinero para costear terapia psicológica privada? 
+                Aquí tienes un espacio seguro para hablar con alguien sin filtros, sin sermones y sin costo.
               </p>
 
               {/* Call To Action Button Group */}
@@ -75,10 +78,10 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="#como-funciona"
+                  href="#lineas-colombia"
                   className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-sm font-medium text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] transition-colors"
                 >
-                  ¿Cómo funciona?
+                  Líneas de ayuda en Colombia
                 </a>
               </div>
 
@@ -86,15 +89,15 @@ export default function Home() {
               <div className="pt-3 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-zinc-400">
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-teal-400" />
-                  <span>Cero costo · Sin tarjetas</span>
+                  <span>Sin costo ni suscripciones</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Lock className="w-4 h-4 text-purple-400" />
-                  <span>100% Privado y anónimo</span>
+                  <span>100% Anónimo y Confidencial</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-zinc-300" />
-                  <span>Sesión individual de 30 min</span>
+                  <MapPin className="w-4 h-4 text-zinc-300" />
+                  <span>Bogotá, Medellín, Cali y todo el país</span>
                 </div>
               </div>
             </div>
@@ -103,11 +106,11 @@ export default function Home() {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden glass-panel border border-white/[0.1] shadow-2xl shadow-black/80 p-6 space-y-5">
                 
-                {/* Photo: Human warmth, sitting with a warm cup, looking peaceful */}
+                {/* Photo: Human warmth */}
                 <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-white/[0.08]">
                   <Image
                     src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
-                    alt="Persona tranquila desahogándose y encontrando paz"
+                    alt="Persona encontrando tranquilidad y desahogo emocional en una conversación cálida"
                     fill
                     sizes="(max-width: 768px) 100vw, 420px"
                     priority
@@ -118,7 +121,7 @@ export default function Home() {
                   {/* Floating live badge */}
                   <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[11px] text-teal-300 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-ping" />
-                    <span>Disponibilidad semanal</span>
+                    <span>Espacios disponibles esta semana</span>
                   </div>
                 </div>
 
@@ -155,7 +158,7 @@ export default function Home() {
         {/* =========================================================================
             2. HIGHLIGHT STATS BAR (Proof & Clarity)
         ========================================================================= */}
-        <section className="border-y border-white/[0.08] bg-[#0c0d14]/70 py-9">
+        <section className="border-y border-white/[0.08] bg-[#0c0d14]/70 py-9" aria-label="Indicadores del servicio">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="space-y-1.5">
               <p className="font-serif text-3xl sm:text-4xl text-white font-normal">30 Min</p>
@@ -182,13 +185,13 @@ export default function Home() {
         <section id="problema" className="py-24 max-w-6xl mx-auto px-6">
           <div className="max-w-2xl mb-16">
             <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
-              El Problema Real
+              ¿Por qué cuesta tanto hablar?
             </p>
             <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight mb-4">
-              ¿Por qué tantas veces nos guardamos todo?
+              Estás cargando con algo que no puedes contarle a nadie
             </h2>
             <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
-              El dolor y la saturación mental no siempre piden una solución mágica inmediata; la mayoría de las veces sólo necesitan ser expresados y validados en un espacio donde no te juzguen.
+              En Colombia, miles de personas experimentan soledad, ansiedad, tristeza o sobrecarga mental diaria. Sin embargo, encontrar un oído atento sin tener que pagar altos honorarios privados suele ser una odisea.
             </p>
           </div>
 
@@ -199,9 +202,9 @@ export default function Home() {
               <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300 group-hover:scale-110 transition-transform">
                 <VolumeX className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-semibold text-white">El peso del silencio</h3>
+              <h3 className="text-lg font-semibold text-white">El agotamiento del silencio</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Darle vueltas a lo mismo día y noche agota tu energía mental. Cuando no puedes hablar con tus seres queridos por miedo a preocuparlos, la soledad se vuelve abrumadora.
+                Darle vueltas a los mismos problemas una y otra vez agota tu energía y tu paz. Guardártelo todo para no preocupar a tu familia solo multiplica la soledad.
               </p>
             </div>
 
@@ -210,9 +213,9 @@ export default function Home() {
               <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300 group-hover:scale-110 transition-transform">
                 <Lock className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-semibold text-white">Miedo a ser juzgado</h3>
+              <h3 className="text-lg font-semibold text-white">El miedo a ser juzgado</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Temes que si cuentas lo que sientes piensen que eres débil, ingrato o exagerado. Necesitas un espacio neutro donde las apariencias no importen.
+                Temes que al confesar tus dudas, miedos o errores cambie la forma en que los demás te ven. Necesitas un espacio completamente anónimo donde no tengas que fingir fortaleza.
               </p>
             </div>
 
@@ -221,9 +224,9 @@ export default function Home() {
               <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-300 group-hover:scale-110 transition-transform">
                 <AlertTriangle className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-semibold text-white">La barrera del dinero</h3>
+              <h3 className="text-lg font-semibold text-white">La barrera del dinero en salud mental</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                La terapia privada es costosa y muchas personas simplemente no tienen el presupuesto en este momento. Desahogo Pro existe para darte una mano sin pedirte nada a cambio.
+                Una consulta de psicología privada en Colombia oscila frecuentemente entre $100.000 y $250.000 COP por hora, siendo inaccesible para la mayoría. Desahogo Pro existe para darte una mano sin pedirte dinero.
               </p>
             </div>
 
@@ -241,7 +244,7 @@ export default function Home() {
               <div className="lg:col-span-5 glass-panel border border-teal-500/20 p-8 sm:p-12 rounded-3xl text-center space-y-4 shadow-2xl relative overflow-hidden">
                 <div className="absolute -top-12 -left-12 w-32 h-32 bg-teal-500/15 rounded-full blur-2xl" />
                 <span className="text-xs uppercase tracking-widest text-teal-400 font-semibold">
-                  La Propuesta Central
+                  La Oferta Concreta
                 </span>
                 <div className="font-serif text-8xl sm:text-9xl text-white font-normal leading-none tracking-tight">
                   30
@@ -251,13 +254,13 @@ export default function Home() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 pt-2">
                   <span className="px-3 py-1 rounded-full text-xs bg-zinc-800 text-zinc-300 border border-white/[0.06]">
-                    Sin consejos no pedidos
+                    Sin consejos no solicitados
                   </span>
                   <span className="px-3 py-1 rounded-full text-xs bg-zinc-800 text-zinc-300 border border-white/[0.06]">
                     Sin sermones
                   </span>
                   <span className="px-3 py-1 rounded-full text-xs bg-teal-500/20 text-teal-300 border border-teal-500/30 font-medium">
-                    100% Gratuito
+                    Sin costo ($0 COP)
                   </span>
                 </div>
               </div>
@@ -272,31 +275,31 @@ export default function Home() {
                   <span className="italic text-zinc-400">Venimos a escucharte de verdad.</span>
                 </h2>
                 <p className="text-zinc-300 text-base leading-relaxed">
-                  30 minutos donde lo único que importa es lo que tú quieras decir. No voy a interrumpirte para contarte mi vida, ni a darte frases de autoayuda clichés. Solo presencia humana atenta y respetuosa.
+                  30 minutos donde lo único que importa es lo que tú quieras expresar. No voy a interrumpirte para contarte anécdotas mías, ni a darte frases vacías de autoayuda. Solo presencia humana atenta, empática y respetuosa.
                 </p>
 
                 <div className="space-y-4 pt-2">
                   <div className="flex items-start gap-3.5">
                     <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-sm font-semibold text-white">Escucha activa y sin interrupciones</h4>
-                      <p className="text-xs sm:text-sm text-zinc-400">Tienes el micrófono abierto para desahogar lo que no has podido pronunciar.</p>
+                      <h3 className="text-sm font-semibold text-white">Escucha activa y respetuosa</h3>
+                      <p className="text-xs sm:text-sm text-zinc-400">Tú marcas el ritmo de la conversación. Puedes llorar, hacer pausas o hablar rápido; este espacio te pertenece.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
                     <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-sm font-semibold text-white">Acompañamiento humano y orientación</h4>
-                      <p className="text-xs sm:text-sm text-zinc-400">Si en algún momento identificamos que requieres atención clínica especializada, te orientaremos a encontrarla con respeto y calidez.</p>
+                      <h3 className="text-sm font-semibold text-white">Acompañamiento humano y orientación</h3>
+                      <p className="text-xs sm:text-sm text-zinc-400">Si en algún momento identificamos que requieres atención clínica o médica especializada, te orientaremos hacia las rutas profesionales y gratuitas en Colombia.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
                     <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-sm font-semibold text-white">Sin registros ni ventas posteriores</h4>
-                      <p className="text-xs sm:text-sm text-zinc-400">Es una labor puramente voluntaria y humanitaria. No hay cobros ocultos ni ofertas comerciales al terminar.</p>
+                      <h3 className="text-sm font-semibold text-white">Servicio voluntario y transparente</h3>
+                      <p className="text-xs sm:text-sm text-zinc-400">No hay cobros posteriores, no hay membresías ocultas ni recopilación de datos comerciales. Es una iniciativa puramente humanitaria.</p>
                     </div>
                   </div>
                 </div>
@@ -327,10 +330,10 @@ export default function Home() {
               Lo Que Obtienes
             </p>
             <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight mb-4">
-              Tres cosas que cambian todo
+              Tres pilares fundamentales
             </h2>
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-              No necesitas pagar una fortuna para experimentar el alivio inmediato de ser escuchado con honestidad.
+              No necesitas meses de espera para sentir el alivio inmediato de sacar las palabras de tu cabeza.
             </p>
           </div>
 
@@ -343,7 +346,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Privacidad Total</h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                Lo que se dice en la sesión, muere en la sesión. Sin registros oficiales, sin grabaciones y sin rastro. Tu historia te pertenece sólo a ti.
+                Lo que se dice en la sesión, muere en la sesión. Sin registros oficiales, sin grabaciones y sin rastro. Tu tranquilidad y anonimato están protegidos.
               </p>
               <div className="text-xs text-teal-300 font-medium">
                 Confidencialidad absoluta
@@ -357,7 +360,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Cero Filtros</h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                Puedes decir las cosas como son, sin adornarlas y sin miedo a &ldquo;quedar mal&rdquo;. Aquí se permite la rabia, la confusión o el llanto sin censura.
+                Puedes decir las cosas como son, sin miedo a &ldquo;quedar mal&rdquo;. Aquí se permite la rabia, la confusión o el llanto sin máscaras ni etiquetas.
               </p>
               <div className="text-xs text-purple-300 font-medium">
                 Libertad de expresión plena
@@ -391,7 +394,7 @@ export default function Home() {
                 ¿Qué pasa cuando decides hablar?
               </h2>
               <p className="text-zinc-400 text-sm">
-                La diferencia entre seguir cargando solo o permitirte soltar la carga.
+                La diferencia entre seguir cargando en soledad o regalarte 30 minutos de alivio.
               </p>
             </div>
 
@@ -446,7 +449,129 @@ export default function Home() {
         </section>
 
         {/* =========================================================================
-            7. HOW IT WORKS (Simple 3 steps)
+            7. SEO DIRECTORY: GUÍA DE LÍNEAS DE AYUDA Y SALUD MENTAL EN COLOMBIA
+            (Clave para captar búsquedas orgánicas en Google Colombia con alto E-E-A-T)
+        ========================================================================= */}
+        <section id="lineas-colombia" className="py-24 max-w-6xl mx-auto px-6 border-b border-white/[0.08]">
+          <div className="max-w-3xl mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-semibold uppercase tracking-widest mb-3">
+              <Phone className="w-3.5 h-3.5" />
+              <span>Directorio de Apoyo en Colombia</span>
+            </div>
+            <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight mb-4">
+              Líneas de atención y apoyo psicológico gratuito en Colombia
+            </h2>
+            <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
+              En Desahogo Pro creemos en la solidaridad y el acceso abierto al bienestar. Si buscas atención psicológica clínica inmediata o atraviesas una situación de emergencia en Colombia, ponemos a tu disposición estos canales oficiales gratuitos y 24 horas:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {/* Línea 106 */}
+            <div className="p-6 rounded-3xl glass-panel border border-white/[0.08] space-y-3 hover:border-teal-400/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase tracking-wider text-teal-300 font-semibold">Nacional / Bogotá</span>
+                <span className="text-[11px] px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20">24 Horas</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Línea 106: El poder de ser escuchado</h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Canal gratuito de primeros auxilios psicológicos y escucha activa de la Secretaría de Salud y MinSalud.
+              </p>
+              <div className="pt-2 flex flex-col gap-1.5 text-xs">
+                <a href="tel:106" className="text-teal-400 font-semibold hover:underline flex items-center gap-1">
+                  Marcar al 106 (Gratis)
+                </a>
+                <span className="text-zinc-400">WhatsApp: 300 754 8933</span>
+              </div>
+            </div>
+
+            {/* Línea 123 */}
+            <div className="p-6 rounded-3xl glass-panel border border-white/[0.08] space-y-3 hover:border-rose-400/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase tracking-wider text-rose-400 font-semibold">Emergencias Nacionales</span>
+                <span className="text-[11px] px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-300 border border-rose-500/20">24/7 Urgencias</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Línea 123: Auxilio Inmediato</h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Para riesgo inminente a la vida, tentativa de autolesión o emergencia médica y psiquiátrica inmediata en todo el territorio nacional.
+              </p>
+              <div className="pt-2 text-xs">
+                <a href="tel:123" className="text-rose-400 font-semibold hover:underline">
+                  Marcar al 123 (Policía / Ambulancias)
+                </a>
+              </div>
+            </div>
+
+            {/* Línea Púrpura */}
+            <div className="p-6 rounded-3xl glass-panel border border-white/[0.08] space-y-3 hover:border-purple-400/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase tracking-wider text-purple-300 font-semibold">Mujeres</span>
+                <span className="text-[11px] px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">Gratuita</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Línea Púrpura Distrital</h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Atención y orientación psicosocial gratuita especializada para mujeres mayores de 18 años ante situaciones de crisis emocional o violencia.
+              </p>
+              <div className="pt-2 text-xs">
+                <a href="tel:018000112137" className="text-purple-300 font-semibold hover:underline">
+                  01 8000 112 137
+                </a>
+              </div>
+            </div>
+
+            {/* Línea Calma */}
+            <div className="p-6 rounded-3xl glass-panel border border-white/[0.08] space-y-3 hover:border-indigo-400/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase tracking-wider text-indigo-300 font-semibold">Hombres</span>
+                <span className="text-[11px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Gratuita</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Línea Calma</h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Espacio de escucha y asesoramiento emocional para hombres en manejo de ansiedad, frustración, celos, duelo o depresión.
+              </p>
+              <div className="pt-2 text-xs">
+                <a href="tel:018000423614" className="text-indigo-300 font-semibold hover:underline">
+                  01 8000 423 614
+                </a>
+              </div>
+            </div>
+
+            {/* Escuchaderos Medellín / Antioquia */}
+            <div className="p-6 rounded-3xl glass-panel border border-white/[0.08] space-y-3 hover:border-teal-400/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase tracking-wider text-teal-300 font-semibold">Medellín / Presencial</span>
+                <span className="text-[11px] px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20">Puntos Clave</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Escuchaderos Comunitarios</h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Puntos de atención gratuita presencial en estaciones del Metro y comunas de Medellín con psicólogos profesionales sin cita previa.
+              </p>
+              <div className="pt-2 text-xs text-zinc-400">
+                Línea amiga Medellín: <a href="tel:6044444448" className="text-teal-400 font-semibold hover:underline">(604) 444 44 48</a>
+              </div>
+            </div>
+
+            {/* Línea 106 Cali / Valle */}
+            <div className="p-6 rounded-3xl glass-panel border border-white/[0.08] space-y-3 hover:border-teal-400/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase tracking-wider text-teal-300 font-semibold">Cali y Valle del Cauca</span>
+                <span className="text-[11px] px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20">Línea 106</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Línea de Salud Mental Cali</h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Orientación psicológica telefónica y canal de teleorientación para la prevención de la depresión, estrés y crisis familiar.
+              </p>
+              <div className="pt-2 text-xs text-zinc-400">
+                Marcar 106 en el Valle o <a href="tel:106" className="text-teal-400 font-semibold hover:underline">atención gratuita</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* =========================================================================
+            8. HOW IT WORKS (Simple 3 steps)
         ========================================================================= */}
         <section id="como-funciona" className="py-24 max-w-6xl mx-auto px-6">
           <div className="max-w-2xl mb-16">
@@ -454,10 +579,10 @@ export default function Home() {
               Proceso Transparente
             </p>
             <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal tracking-tight mb-4">
-              Tres pasos. Sin complicaciones.
+              ¿Cómo funciona? En tres pasos sencillos.
             </h2>
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-              No tienes que llenar cuestionarios invasivos ni dar tu tarjeta de crédito. Solo dos minutos para elegir tu hora.
+              No tienes que llenar cuestionarios invasivos ni dar tu tarjeta de crédito. Solo dos minutos para elegir tu hora en el calendario.
             </p>
           </div>
 
@@ -483,7 +608,7 @@ export default function Home() {
               <span className="font-serif text-4xl text-teal-300 font-normal">03</span>
               <h3 className="text-lg font-semibold text-white">Sueltas la carga</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                30 minutos de escucha honesta y radical. Al terminar, respirarás con más calma y perspectiva.
+                30 minutos de escucha honesta y radical. Al terminar, respirarás con más calma, ligereza y perspectiva.
               </p>
             </div>
 
@@ -491,7 +616,7 @@ export default function Home() {
         </section>
 
         {/* =========================================================================
-            8. FINAL CONVERSION SECTION (High Visibility CTA)
+            9. FINAL CONVERSION SECTION (High Visibility CTA)
         ========================================================================= */}
         <section className="py-24 border-t border-white/[0.08] relative">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal-950/15 to-transparent pointer-events-none" />
@@ -504,11 +629,11 @@ export default function Home() {
 
             <h2 className="font-serif text-3xl sm:text-6xl text-white font-normal tracking-tight leading-tight">
               No tienes que seguir cargando <br className="hidden sm:inline" />
-              con todo en silencio.
+              con todo en soledad.
             </h2>
 
             <p className="text-zinc-300 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-              Un clic es todo lo que te separa de 30 minutos de paz y escucha sincera. Sin costo, sin sermones y con total anonimato.
+              Un clic es todo lo que te separa de 30 minutos de paz y escucha sincera. Sin costo, sin sermones y con total anonimato desde cualquier lugar de Colombia.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -537,12 +662,12 @@ export default function Home() {
         </section>
 
         {/* =========================================================================
-            9. FAQ SECTION
+            10. FAQ SECTION (With FAQPage Schema.org)
         ========================================================================= */}
         <FAQSection />
 
         {/* =========================================================================
-            10. MANDATORY LEGAL DISCLAIMER & EMERGENCY HELPLINES
+            11. MANDATORY LEGAL DISCLAIMER & EMERGENCY HELPLINES
         ========================================================================= */}
         <section className="py-14 border-t border-white/[0.08] bg-[#090a0f]">
           <div className="max-w-4xl mx-auto px-6">
@@ -564,7 +689,7 @@ export default function Home() {
               {/* Helplines for Immediate Life Danger */}
               <div className="pt-3 border-t border-rose-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
                 <p className="text-rose-300 font-medium">
-                  🚨 Si estás en peligro inmediato o crisis vital severa:
+                  🚨 Si estás en peligro inmediato o crisis vital severa en Colombia:
                 </p>
                 <div className="flex flex-wrap items-center gap-4 font-semibold text-rose-400">
                   <a href="tel:123" className="underline hover:text-rose-200">
