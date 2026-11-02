@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Desahogo Pro — El fin del ruido mental
 
-## Getting Started
+Landing page desarrollada con **Next.js (App Router, TypeScript, Tailwind CSS v4, Lucide Icons)** inspirada en las mejores prácticas de plataformas líderes de salud y bienestar emocional como **Selia**, y el diseño minimalista y cuidado de **Emil Kowalski**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Repositorio en GitHub
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El proyecto ya está publicado en:
+**[https://github.com/wilmercxd/desahogo-pro](https://github.com/wilmercxd/desahogo-pro)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-## Learn More
+## ⚡ Cómo Desplegar en Vercel en 1 Clic
 
-To learn more about Next.js, take a look at the following resources:
+1. Ingresa a [vercel.com/new](https://vercel.com/new).
+2. Conecta tu cuenta de GitHub (`wilmercxd`).
+3. Selecciona el repositorio **`desahogo-pro`**.
+4. Deja la configuración predeterminada de Next.js y haz clic en **Deploy**.
+5. ¡Listo! Tendrás tu enlace de producción (ejemplo: `https://desahogo-pro.vercel.app`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📋 Arquitectura y Características
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 16 (Turbopack, App Router)**: Renderizado estático ultra rápido para máxima conversión.
+- **Tipografía Editorial**: `Newsreader` (serif suave para títulos emotivos y humanos) + `Inter` (sans para lectura clara y descansada).
+- **Call to Action Omnipresente**:
+  - En la barra de navegación superior (derecha) en todo momento.
+  - En el Hero principal con beneficios de confianza.
+  - En el desglose de la oferta de 30 minutos.
+  - Al final de la página antes del pie de página.
+  - Todos enlazados a tu calendario oficial: `https://calendar.app.google/QUHZjk8fuGqnutdF9`.
+- **Fotografía Editorial**: Imágenes cálidas y sin saturación artificial procedentes de Unsplash.
+- **Cumplimiento Legal y Estándares Mínimos**:
+  - `/privacidad`: Política de Privacidad detallada (principio de anonimato radical y protección de datos).
+  - `/terminos`: Términos y Condiciones de uso voluntario.
+  - `/disclaimer`: Descargo de Responsabilidad enfático (especifica el carácter no médico/psicológico clínico del espacio) y líneas telefónicas de emergencia inmediatas (Línea 106 y 123 en Colombia).
+- **Sección FAQ**: Acordeón interactivo para resolver dudas y derribar objeciones.
