@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   applicationName: "Desahogo Pro",
   authors: [{ name: "Desahogo Pro Colombia" }],
   generator: "Next.js",
+  verification: {
+    google: "OZ75py7ICHIeppJUS2_hiQfGcqXMB8ihxWo8-QjN0ew",
+  },
   keywords: [
     // Búsquedas de alto volumen durante el año en Colombia
     "psicologo gratis colombia",
@@ -102,6 +105,7 @@ export const metadata: Metadata = {
     "geo.region": "CO",
     "geo.placename": "Colombia",
     "language": "Spanish",
+    "google-site-verification": "OZ75py7ICHIeppJUS2_hiQfGcqXMB8ihxWo8-QjN0ew",
   },
 };
 
@@ -165,6 +169,7 @@ export default function RootLayout({
   return (
     <html lang="es-CO" className={`${inter.variable} ${newsreader.variable} scroll-smooth`}>
       <head>
+        <meta name="google-site-verification" content="OZ75py7ICHIeppJUS2_hiQfGcqXMB8ihxWo8-QjN0ew" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
